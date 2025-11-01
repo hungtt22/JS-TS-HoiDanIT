@@ -52,3 +52,25 @@ const highScores = scores.filter((score) => {
     return score > 25;
 });
 console.log(highScores);
+
+// Shallow copy vs Deep copy
+const originalArray = [1, 2, 3, 4, 5];
+const shallowCopy = originalArray; // Shallow copy
+// Shallow copy: Biến cũ và biến mới cùng tham chiếu đến một vùng nhớ và khi thay đổi biến mới thì biến cũ cũng bị thay đổi theo và ngược lại
+const deepCopy = [...originalArray]; // Deep copy
+// Deep copy: Biến mới hoàn toàn độc lập với biến cũ  và khi thay đổi biến mới thì biến cũ không bị ảnh hưởng và ngược lại
+const pizza1 = {
+    name: "Peperoni",
+    price: 100,
+    toppings: ["cheese", "tomato", "pepperoni"],
+};
+const shallowCopy2 = pizza1; // Shallow copy
+const deepCopy2 = {
+    ...pizza1,
+    toppings: [...pizza1.toppings],
+}; // Deep copy
+shallowCopy2.price = 120;
+deepCopy2.toppings[0] = "mushrooms";
+console.log(pizza1);
+console.log(shallowCopy2);
+console.log(deepCopy2);
