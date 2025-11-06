@@ -46,28 +46,3 @@ promise2
     .then(function (data) {
         console.log(data);
     });
-
-//Callback là một hàm (function) được truyền làm đối số cho một hàm khác,
-// và được dự kiến sẽ được gọi lại (called back) tại một thời điểm nào đó sau này.
-//Hàm chứa callback sẽ thực hiện thành công việc của nó và sau đó gọi callback để thông báo kết quả hoặc tiếp tục xử lý.
-// Hàm 'xuLySau' là callback
-function xuLySau() {
-    console.log("Đây là công việc được thực hiện sau.");
-}
-
-// Hàm 'xuLyChinh' nhận một callback làm đối số
-function xuLyChinh(callback) {
-    console.log("Bắt đầu công việc chính...");
-    // Giả lập một công việc bất đồng bộ (ví dụ: chờ 2 giây)
-    setTimeout(callback, 2000);
-    console.log("Công việc chính đã xong.");
-}
-xuLyChinh(xuLySau);
-// Đầu ra:
-// Bắt đầu công việc chính...
-// Công việc chính đã xong.
-// (Sau 2 giây)
-// Đây là công việc được thực hiện sau.
-
-//Callback hell là tình trạng mã nguồn trở nên khó đọc và khó bảo trì khi bạn phải thực hiện nhiều thao tác bất đồng bộ phụ thuộc
-// lẫn nhau bằng cách lồng các hàm callback vào nhau.
