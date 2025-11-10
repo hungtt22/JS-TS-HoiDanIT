@@ -1,0 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    padding: 50px;
+}
+.subtitle {
+    margin: 15px 0px;
+}
+.users {
+    border-collapse: collapse;
+}
+.users td,
+.users th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.users th {
+    color: white;
+    background-color: #0fc275;
+}

@@ -96,6 +96,11 @@ const inStockProducts = products.filter((product) => {
 });
 console.log(inStockProducts);
 //7.
+//for in: Duyệt qua các thuộc tính của phần từ
 for (let key in products[0]) {
     console.log(key);
+}
+//for of: Duyệt qua object (key-value) của mảng
+for (const product of products) {
+    console.log(product);
 }
