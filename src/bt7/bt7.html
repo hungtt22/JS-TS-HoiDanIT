@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BT07</title>
+        <style>
+            body {
+                padding: 20px;
+            }
+            table {
+                margin-top: 50px;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                padding: 10px;
+            }
+            th {
+                background-color: lightgray;
+            }
+            input {
+                display: block;
+                margin-top: 10px;
+            }
+            #addBlogBtn {
+                margin-top: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <label for="title">Title</label>
+        <input type="text" id="title" />
+        <label for="author">Author</label>
+        <input type="text" id="author" />
+        <label for="content">Content</label>
+        <input type="text" id="content" />
+        <button id="addBlogBtn">Add Blog</button>
+        <table id="blogList">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Content</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <script src="./bt7.js"></script>
+    </body>
+</html>
